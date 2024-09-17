@@ -42,7 +42,7 @@ export class UsersDashboardComponent {
 
   addUser(user: IUser): void{
     //se ocuapa para poder pushear a la tabla los datos que se añadiran 
-    this.users.push(user);
+    this.users.push({...user});
     console.log(this.users);
   }
 

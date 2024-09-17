@@ -7,6 +7,8 @@ import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UsersModule
+    UsersModule,
   ],
   providers: [
     provideAnimationsAsync()

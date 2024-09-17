@@ -4,8 +4,21 @@
             <label for="name">ID</label>
             <input type="text" name="id" id="id" disabled [value]="user.id">
         </div>
+        
         <label for="name">NAME</label>
         <input type="text" name="nombre" id="nombre" [(ngModel)]="user.name">
+
+        <label for="name">USERNAME</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="user.username">
+
+        <label for="name">EMAIL</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="user.email">
+
+        <label for="name">PHONE</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="user.phone">
+
+        <label for="name">NAME</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="user.website">
     </form>
 
     <button class="button-5" role="button" (click)="mostrar()">ACTIVAR</button>
