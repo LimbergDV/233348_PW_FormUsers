@@ -1,1 +1,43 @@
-<p>users-dashboard works!</p>
+<header>
+    <h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl text-center">
+       Users albums
+    </h1>
+</header>
+
+    <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+        <table id="example" class="stripe hover mx-auto" style="width:100%; padding-top: 1em; padding-bottom: 1em;">
+            <thead>
+                <tr class="table_div">
+                    <th class="table_title text-left" data-priority="1">ID</th>
+                    <th class="table_title text-left" data-priority="2">NAME</th>
+                    <th class="table_title text-left" data-priority="2">USERNAME</th>
+                    <th class="table_title text-left" data-priority="3">EMAIL</th>
+                    <th class="table_title text-left" data-priority="4">PHONE</th>
+                    <th class="table_title text-left" data-priority="5">WEBSITE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="data-user" *ngFor="let user of users">
+                    <td class="text-left">{{user.id}}</td>
+                    <td class="text-left">{{user.name}}</td>
+                    <td class="text-left">{{user.username}}</td>
+                    <td class="text-left">{{user.email}}</td>
+                    <td class="text-left">{{user.phone}}</td>
+                    <td class="text-left">{{user.website}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- aca es donde se le pasa la variable user que tiene a selectedUser en donde esta variable sera lo que modificara los Datos
+    y donde se usa en event Emitter se esta usando el output -->
+    <app-edit-user-form         
+    
+    [user]="selectedUser" 
+    (eventEmitter)="addUser($event)">
+
+    </app-edit-user-form>
