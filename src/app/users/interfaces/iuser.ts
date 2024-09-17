@@ -1,0 +1,2 @@
+export interface EditUserForm {
+}
