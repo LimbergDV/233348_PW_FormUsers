@@ -1,1 +1,33 @@
-<p>users-dashboard works!</p>
+<header>
+    <h1 id="h1-header">Users Table</h1>
+</header>
+
+<div id="recipients">
+    <table id="table" class="stripe hover mx-auto">
+        <thead>
+            <tr id="table-header">
+                <th>ID</th>
+                <th>NAME</th>
+                <th>USERNAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                <th>WEBSITE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="data-user" *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.website }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-edit-user-form         
+    [user]="selectedUser" 
+    (eventEmitter)="addUser($event)">
+</app-edit-user-form>
