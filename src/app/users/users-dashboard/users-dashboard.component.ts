@@ -27,8 +27,6 @@ export class UsersDashboardComponent {
     displayedColumns: string[] = ['id', 'name', 'username', 'email', 'phone', 'website']
     users: IUser[]= []
 
-  //esto por el injectable no se ocupa declarar la instancia lo del new, solo con declararlo
-  //guion bajo _ para los servicios inyectables
   constructor(private _service: UserService){
 
     this._service.getAll().subscribe(

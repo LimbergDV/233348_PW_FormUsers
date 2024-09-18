@@ -1,23 +1,27 @@
-#h1-header{
-    font-size: 35px;
+#h1-header {
     font-weight: bolder;
     text-align: center;
 }
 
-#table table{
+#table {
     margin-top: 36px;
-    margin-left: 38vh;
     border-collapse: collapse;
+    width: 100%;
 }
 
-#table table #table-headers{
+#table thead th {
     color: black;
     font-weight: bolder;
     background-color: aquamarine;
+    padding: 1em;
 }
 
-#table table .data-user{
+#table tbody .data-user {
     color: black;
     background-color: rgba(127, 255, 212, 0.321);
 }
 
+#table tbody td {
+    padding: 1em;
+    text-align: left;
+}
